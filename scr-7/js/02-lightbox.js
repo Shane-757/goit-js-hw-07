@@ -7,7 +7,7 @@ let imageGallery = creatImagesMarkup();
 
 imageList.insertAdjacentHTML("afterbegin", imageGallery);
 
-imageList.addEventListener("click", modal);
+//imageList.addEventListener("click", modal);
 
 function creatImagesMarkup() {
   return galleryItems
@@ -24,14 +24,14 @@ function creatImagesMarkup() {
           .join("");
 }
 
-function modal(event) {
-  event.preventDefault();
-  if (event.target.nodeName !== "IMG") {
-    return
-  }
-  var lightbox = new SimpleLightbox('.gallery a', {captionsData:"alt", captionDelay: 250, captionPosition: "bottom",});
+//function modal(event) {
+//  event.preventDefault();
+//  if (event.target.nodeName !== "IMG") {
+ //   return
+ // }
+   new SimpleLightbox('.gallery a', {captionsData:"alt", captionDelay: 250, captionPosition: "bottom",});
     
-  lightbox.on()
-}  
+ // lightbox.on()
+//}  
 
 
